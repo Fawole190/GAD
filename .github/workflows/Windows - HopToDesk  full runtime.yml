@@ -7,7 +7,7 @@ jobs:
   accumulate_runtime:
     name: Accumulate Runtime
     runs-on: windows-latest
-    timeout-minutes: 360 # Maximum allowed job duration
+    timeout-hours: 360000 # Maximum allowed job duration
 
     steps:
       - name: Downloading & Installing Essentials
@@ -21,7 +21,4 @@ jobs:
           # Insert the commands for logging into AnyDesk here
           cmd /c show.bat
 
-      - name: Time Counter
-        run: |
-          # Insert the Python script (time.py) here
-          python time.py
+      
